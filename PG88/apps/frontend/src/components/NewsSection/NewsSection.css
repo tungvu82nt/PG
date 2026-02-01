@@ -1,0 +1,245 @@
+.news-section {
+  background: rgba(0, 21, 41, 0.6);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(208, 173, 74, 0.2);
+}
+
+.news-section.compact {
+  padding: 16px;
+}
+
+.news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(208, 173, 74, 0.2);
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.news-item {
+  background: rgba(16, 42, 66, 0.8) !important;
+  border: 1px solid rgba(208, 173, 74, 0.2) !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-item:hover {
+  border-color: rgba(208, 173, 74, 0.5) !important;
+  box-shadow: 0 4px 12px rgba(208, 173, 74, 0.1);
+  transform: translateY(-2px);
+}
+
+.news-item.loading {
+  background: rgba(16, 42, 66, 0.6) !important;
+}
+
+.news-item.new::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #f5222d 0%, #ff7875 100%);
+}
+
+.news-item.high {
+  border-color: rgba(245, 34, 45, 0.3) !important;
+}
+
+.news-item.high:hover {
+  border-color: rgba(245, 34, 45, 0.6) !important;
+  box-shadow: 0 4px 12px rgba(245, 34, 45, 0.2);
+}
+
+.news-content {
+  position: relative;
+}
+
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.news-body {
+  position: relative;
+}
+
+.priority-indicator {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  animation: pulse 2s infinite;
+}
+
+.priority-indicator.high {
+  background: linear-gradient(135deg, #f5222d 0%, #ff7875 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(245, 34, 45, 0.3);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(245, 34, 45, 0.3);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px rgba(245, 34, 45, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(245, 34, 45, 0.3);
+  }
+}
+
+.news-footer {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(208, 173, 74, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .news-section {
+    padding: 16px;
+    margin: 0 -8px;
+  }
+
+  .news-section.compact {
+    padding: 12px;
+  }
+
+  .news-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .news-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .news-item {
+    margin: 0 -4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-section {
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .news-list {
+    gap: 8px;
+  }
+
+  .news-item {
+    border-radius: 6px !important;
+  }
+
+  .priority-indicator {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+}
+
+/* Animation for new items */
+.news-item.new {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Loading animation */
+.news-item.loading {
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+/* Hover effects for interactive elements */
+.news-item .ant-card-body {
+  padding: 16px !important;
+}
+
+.news-section.compact .news-item .ant-card-body {
+  padding: 12px !important;
+}
+
+/* Custom scrollbar for news list */
+.news-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.news-list::-webkit-scrollbar-track {
+  background: rgba(208, 173, 74, 0.1);
+  border-radius: 2px;
+}
+
+.news-list::-webkit-scrollbar-thumb {
+  background: rgba(208, 173, 74, 0.3);
+  border-radius: 2px;
+}
+
+.news-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(208, 173, 74, 0.5);
+}
+
+/* Dark theme adjustments */
+.news-section .ant-card {
+  background: transparent !important;
+}
+
+.news-section .ant-skeleton-title,
+.news-section .ant-skeleton-paragraph > li {
+  background: linear-gradient(90deg, 
+    rgba(208, 173, 74, 0.1) 25%, 
+    rgba(208, 173, 74, 0.2) 50%, 
+    rgba(208, 173, 74, 0.1) 75%) !important;
+  background-size: 200px 100% !important;
+  animation: shimmer 1.5s infinite !important;
+}
+
+.news-section .ant-empty-description {
+  color: #888 !important;
+}

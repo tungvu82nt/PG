@@ -1,0 +1,390 @@
+/* Game Lobby Styles */
+.game-lobby-container {
+  padding: 24px;
+  background: var(--blue-dark);
+  min-height: calc(100vh - 100px);
+}
+
+/* Header */
+.lobby-header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 32px;
+  background: linear-gradient(135deg, rgba(208, 173, 74, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(208, 173, 74, 0.2);
+}
+
+.lobby-title {
+  color: white;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.lobby-icon {
+  color: #d0ad4a;
+  font-size: 32px;
+}
+
+.lobby-subtitle {
+  color: #8c8c8c;
+  font-size: 16px;
+}
+
+/* Filters Card */
+.filters-card {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin-bottom: 24px;
+}
+
+.game-search .ant-input {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.game-search .ant-input:focus,
+.game-search .ant-input-focused {
+  border-color: #d0ad4a;
+  box-shadow: 0 0 0 2px rgba(208, 173, 74, 0.2);
+}
+
+.provider-select .ant-select-selector {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+.provider-select .ant-select-selection-item {
+  color: white !important;
+}
+
+/* Categories Card */
+.categories-card {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin-bottom: 24px;
+}
+
+.category-tabs .ant-tabs-tab {
+  color: #8c8c8c;
+  font-weight: 500;
+  padding: 12px 24px;
+}
+
+.category-tabs .ant-tabs-tab-active {
+  color: #d0ad4a;
+}
+
+.category-tabs .ant-tabs-tab:hover {
+  color: #d0ad4a;
+}
+
+.category-tabs .ant-tabs-ink-bar {
+  background: #d0ad4a;
+}
+
+/* Games Grid Card */
+.games-grid-card {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin-bottom: 24px;
+}
+
+/* Game Card */
+.game-card {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 280px;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(208, 173, 74, 0.3);
+  border-color: rgba(208, 173, 74, 0.5);
+}
+
+.game-card-cover {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover .game-image {
+  transform: scale(1.1);
+}
+
+.game-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.game-card:hover .game-overlay {
+  opacity: 1;
+}
+
+.play-button {
+  background: linear-gradient(135deg, #d0ad4a 0%, #ffd700 100%);
+  border: none;
+  color: #000;
+  font-size: 24px;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 4px 16px rgba(208, 173, 74, 0.4);
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover .play-button {
+  transform: scale(1);
+}
+
+.play-button:hover {
+  background: linear-gradient(135deg, #ffd700 0%, #d0ad4a 100%);
+  transform: scale(1.1);
+}
+
+/* Game Badges */
+.game-badges {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hot-badge .ant-badge-count {
+  background: linear-gradient(135deg, #ff4d4f 0%, #ff7875 100%);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 2px 6px;
+  animation: pulse 2s infinite;
+}
+
+.new-badge .ant-badge-count {
+  background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 2px 6px;
+}
+
+.provider-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.provider-badge .ant-tag {
+  background: rgba(208, 173, 74, 0.9);
+  color: #000;
+  border: none;
+  font-weight: bold;
+  font-size: 10px;
+  margin: 0;
+}
+
+/* Game Info */
+.game-title {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.jackpot-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jackpot-label {
+  color: #8c8c8c;
+  font-size: 11px;
+}
+
+.jackpot-amount {
+  color: #d0ad4a;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.rtp-info {
+  color: #52c41a;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.bet-info {
+  color: #8c8c8c;
+  font-size: 10px;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.loading-container .ant-spin {
+  color: #d0ad4a;
+}
+
+/* Load More */
+.load-more-container {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.load-more-btn {
+  background: linear-gradient(135deg, #d0ad4a 0%, #ffd700 100%);
+  border: none;
+  color: #000;
+  font-weight: bold;
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(208, 173, 74, 0.3);
+}
+
+.load-more-btn:hover {
+  background: linear-gradient(135deg, #ffd700 0%, #d0ad4a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(208, 173, 74, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-lobby-container {
+    padding: 16px;
+  }
+  
+  .lobby-header {
+    padding: 24px 16px;
+  }
+  
+  .lobby-title {
+    font-size: 24px;
+  }
+  
+  .lobby-icon {
+    font-size: 24px;
+  }
+  
+  .game-card {
+    height: 240px;
+  }
+  
+  .game-card-cover {
+    height: 140px;
+  }
+  
+  .play-button {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+  
+  .game-title {
+    font-size: 13px;
+  }
+  
+  .filters-card .ant-row {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-card {
+    height: 220px;
+  }
+  
+  .game-card-cover {
+    height: 120px;
+  }
+  
+  .play-button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .category-tabs .ant-tabs-tab {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 77, 79, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0);
+  }
+}
+
+/* Custom scrollbar for game grid */
+.games-grid-card .ant-card-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.games-grid-card .ant-card-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.games-grid-card .ant-card-body::-webkit-scrollbar-thumb {
+  background: rgba(208, 173, 74, 0.5);
+  border-radius: 3px;
+}
+
+.games-grid-card .ant-card-body::-webkit-scrollbar-thumb:hover {
+  background: rgba(208, 173, 74, 0.8);
+}

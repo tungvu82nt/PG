@@ -1,0 +1,268 @@
+.sports-page {
+  min-height: 100vh;
+  background: var(--blue-dark);
+  padding: 24px 0;
+}
+
+.sports-main-card {
+  background: rgba(16, 42, 79, 0.8);
+  border: 1px solid rgba(208, 173, 74, 0.3);
+  border-radius: 12px;
+}
+
+.sports-tabs .ant-tabs-tab {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+
+.sports-tabs .ant-tabs-tab-active {
+  color: #d0ad4a !important;
+}
+
+.sports-tabs .ant-tabs-ink-bar {
+  background: #d0ad4a;
+}
+
+.sport-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.match-card {
+  background: rgba(26, 26, 46, 0.9);
+  border: 1px solid rgba(208, 173, 74, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.match-card:hover {
+  border-color: rgba(208, 173, 74, 0.5);
+  box-shadow: 0 4px 16px rgba(208, 173, 74, 0.2);
+}
+
+.match-card .ant-card-head {
+  background: rgba(208, 173, 74, 0.1);
+  border-bottom: 1px solid rgba(208, 173, 74, 0.2);
+}
+
+.match-card .ant-card-head-title {
+  color: white;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.team-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.live-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.match-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.odds-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.odds-button {
+  background: rgba(208, 173, 74, 0.1);
+  border: 1px solid rgba(208, 173, 74, 0.3);
+  border-radius: 6px;
+  padding: 8px 16px;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.odds-button:hover {
+  background: rgba(208, 173, 74, 0.2);
+  border-color: #d0ad4a;
+  transform: translateY(-2px);
+}
+
+.odds-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.odds-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.odds-value {
+  color: #d0ad4a;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.betting-slip-card {
+  background: rgba(16, 42, 79, 0.9);
+  border: 1px solid rgba(208, 173, 74, 0.3);
+  border-radius: 12px;
+  position: sticky;
+  top: 120px;
+}
+
+.betting-slip-card .ant-card-head {
+  background: rgba(208, 173, 74, 0.1);
+  border-bottom: 1px solid rgba(208, 173, 74, 0.2);
+}
+
+.betting-slip-item {
+  background: rgba(26, 26, 46, 0.5);
+  border: 1px solid rgba(208, 173, 74, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.bet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.bet-selection {
+  margin-bottom: 8px;
+  color: #d0ad4a;
+  font-weight: 600;
+}
+
+.bet-amount {
+  margin-bottom: 8px;
+}
+
+.bet-potential-win {
+  text-align: right;
+}
+
+.betting-slip-summary {
+  background: rgba(208, 173, 74, 0.1);
+  border-radius: 6px;
+  padding: 12px;
+  margin: 16px 0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.summary-row:last-child {
+  margin-bottom: 0;
+  padding-top: 8px;
+  border-top: 1px solid rgba(208, 173, 74, 0.2);
+}
+
+/* Live match animations */
+.match-card .ant-badge-status-processing .ant-badge-status-dot {
+  animation: live-pulse 1.5s infinite;
+}
+
+@keyframes live-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sports-page {
+    padding: 16px 0;
+  }
+  
+  .odds-container {
+    justify-content: center;
+  }
+  
+  .odds-button {
+    flex: 1;
+    min-width: 80px;
+  }
+  
+  .team-info {
+    gap: 8px;
+  }
+  
+  .betting-slip-card {
+    position: static;
+    margin-top: 16px;
+  }
+}
+
+/* Dark theme overrides */
+.sports-page .ant-card {
+  background: rgba(16, 42, 79, 0.8);
+  color: white;
+}
+
+.sports-page .ant-card-head-title {
+  color: white;
+}
+
+.sports-page .ant-tabs-content-holder {
+  background: transparent;
+}
+
+.sports-page .ant-input-number {
+  background: rgba(26, 26, 46, 0.8);
+  border-color: rgba(208, 173, 74, 0.3);
+  color: white;
+}
+
+.sports-page .ant-input-number:hover {
+  border-color: #d0ad4a;
+}
+
+.sports-page .ant-input-number-focused {
+  border-color: #d0ad4a;
+  box-shadow: 0 0 0 2px rgba(208, 173, 74, 0.2);
+}
+
+.sports-page .ant-input-number-input {
+  color: white;
+}
+
+.sports-page .ant-input-number-group-addon {
+  background: rgba(208, 173, 74, 0.2);
+  border-color: rgba(208, 173, 74, 0.3);
+  color: white;
+}

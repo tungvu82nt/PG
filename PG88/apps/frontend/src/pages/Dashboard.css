@@ -1,0 +1,521 @@
+/* Enhanced Dashboard Styles */
+.dashboard-container {
+  padding: 24px;
+  background: var(--blue-dark);
+  min-height: calc(100vh - 100px);
+}
+
+.dashboard-header {
+  margin-bottom: 32px;
+  text-align: center;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(208, 173, 74, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(208, 173, 74, 0.2);
+}
+
+/* Enhanced Balance Card */
+.balance-card-enhanced {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 2px solid #d0ad4a;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(208, 173, 74, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+.balance-card-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #d0ad4a 0%, #ffd700 100%);
+}
+
+.balance-header {
+  padding: 24px;
+}
+
+.balance-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #d0ad4a 0%, #ffd700 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(208, 173, 74, 0.4);
+}
+
+.balance-icon-large {
+  font-size: 28px;
+  color: #000;
+}
+
+.balance-label {
+  color: #8c8c8c;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.balance-actions-enhanced {
+  padding: 0 24px 24px 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.balance-button.deposit-enhanced {
+  background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+  border: none;
+  height: 48px;
+  border-radius: 24px;
+  font-weight: bold;
+  box-shadow: 0 4px 16px rgba(82, 196, 26, 0.3);
+  flex: 1;
+}
+
+.balance-button.withdraw-enhanced {
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+  border: none;
+  height: 48px;
+  border-radius: 24px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 4px 16px rgba(24, 144, 255, 0.3);
+  flex: 1;
+}
+
+.balance-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* VIP Card */
+.vip-card {
+  background: linear-gradient(135deg, #722ed1 0%, #9254de 100%);
+  border: 1px solid rgba(114, 46, 209, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(114, 46, 209, 0.2);
+}
+
+.vip-header {
+  margin-bottom: 16px;
+}
+
+.vip-progress {
+  margin-top: 16px;
+}
+
+/* Enhanced Quick Actions */
+.quick-actions-card-enhanced {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.quick-action-card {
+  height: 120px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.quick-action-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.quick-action-content {
+  text-align: center;
+  padding: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-action-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Stats Cards */
+.stat-card {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Recent Transactions */
+.recent-transactions-card-enhanced {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.card-header-enhanced {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 16px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.transaction-item-enhanced {
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.transaction-item-enhanced:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.transaction-info-enhanced {
+  display: flex;
+  align-items: center;
+}
+
+.transaction-type-enhanced {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.transaction-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.transaction-icon-wrapper.deposit {
+  background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+  color: white;
+}
+
+.transaction-icon-wrapper.withdraw {
+  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+  color: white;
+}
+
+.transaction-amount-enhanced {
+  text-align: right;
+}
+
+/* Legacy styles for compatibility */
+.balance-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.balance-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.balance-icon {
+  font-size: 20px;
+}
+
+.balance-amount {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 16px 0;
+}
+
+.balance-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.balance-button {
+  flex: 1;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.balance-button.deposit {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.balance-button.withdraw {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+.quick-actions-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quick-action-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px 16px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.quick-action-button:hover {
+  border-color: #d0ad4a;
+  box-shadow: 0 2px 8px rgba(208, 173, 74, 0.2);
+}
+
+.quick-action-button .anticon {
+  font-size: 24px;
+  color: #d0ad4a;
+}
+
+.recent-transactions-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 24px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.transaction-type {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+
+.transaction-icon {
+  font-size: 18px;
+}
+
+.transaction-icon.deposit {
+  color: #52c41a;
+}
+
+.transaction-icon.withdraw {
+  color: #ff4d4f;
+}
+
+.transaction-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.transaction-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.transaction-amount-text {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.transaction-amount-text.deposit {
+  color: #52c41a;
+}
+
+.transaction-amount-text.withdraw {
+  color: #ff4d4f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 16px;
+  }
+  
+  .balance-actions-enhanced {
+    flex-direction: column;
+  }
+  
+  .balance-button {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  .quick-action-card {
+    height: 100px;
+  }
+  
+  .quick-action-content {
+    padding: 12px;
+  }
+  
+  .quick-action-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+  
+  .balance-actions {
+    flex-direction: column;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .transaction-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .transaction-amount {
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+/* Animation for balance amount */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ant-statistic-content {
+  animation: countUp 0.8s ease-out;
+}
+
+/* Pulse animation for VIP progress */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(208, 173, 74, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(208, 173, 74, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(208, 173, 74, 0);
+  }
+}
+
+.vip-card .ant-progress-circle {
+  animation: pulse 2s infinite;
+}
+/* Dashboard Real-time Balance Integration */
+.dashboard-balance {
+  width: 100%;
+}
+
+.dashboard-balance .balance-header {
+  margin-bottom: 16px;
+}
+
+.dashboard-balance .balance-display {
+  margin-bottom: 20px;
+}
+
+.balance-card-enhanced .dashboard-balance .real-time-balance {
+  padding: 0;
+}
+
+.balance-card-enhanced .dashboard-balance .balance-statistic {
+  margin-bottom: 0;
+}
+
+/* WebSocket Connection Status */
+.dashboard-header .ant-typography {
+  position: relative;
+}
+
+.dashboard-header .online-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 16px;
+  padding: 4px 8px;
+  background: rgba(82, 196, 26, 0.2);
+  border: 1px solid rgba(82, 196, 26, 0.4);
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.dashboard-header .online-indicator {
+  width: 8px;
+  height: 8px;
+  background: #52c41a;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(82, 196, 26, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(82, 196, 26, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(82, 196, 26, 0);
+  }
+}

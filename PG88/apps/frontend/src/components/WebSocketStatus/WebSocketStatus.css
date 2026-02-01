@@ -1,0 +1,80 @@
+/* WebSocket Status Component */
+.websocket-status {
+  display: inline-flex;
+  align-items: center;
+}
+
+.status-tag {
+  border: none !important;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.3s ease;
+}
+
+.status-tag.small {
+  font-size: 11px;
+  padding: 2px 6px;
+  height: auto;
+  line-height: 1.2;
+}
+
+.status-tag.default {
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+.online-users-tag {
+  border: none !important;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.online-users-tag.small {
+  font-size: 11px;
+  padding: 2px 6px;
+  height: auto;
+  line-height: 1.2;
+}
+
+.online-users-tag.default {
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+/* Success status animation */
+.ant-tag-success .anticon {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Error status animation */
+.ant-tag-error .anticon {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0.5;
+  }
+}

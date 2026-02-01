@@ -1,0 +1,215 @@
+/* Real-time Balance Component Styles */
+.real-time-balance {
+  position: relative;
+}
+
+.balance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.balance-icon {
+  color: #d0ad4a;
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.balance-label {
+  color: #8c8c8c;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.connection-status {
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.connection-status.connected {
+  color: #52c41a;
+  animation: pulse 2s infinite;
+}
+
+.connection-status.disconnected {
+  color: #ff4d4f;
+  animation: blink 1s infinite;
+}
+
+.refresh-button {
+  color: #8c8c8c !important;
+  border: none !important;
+  background: transparent !important;
+  padding: 4px !important;
+  height: auto !important;
+  transition: all 0.3s ease;
+}
+
+.refresh-button:hover:not(:disabled) {
+  color: #d0ad4a !important;
+  background: rgba(208, 173, 74, 0.1) !important;
+  border-radius: 4px;
+}
+
+.refresh-button:disabled {
+  color: #444 !important;
+  cursor: not-allowed;
+}
+
+.balance-display {
+  position: relative;
+}
+
+.balance-statistic {
+  position: relative;
+}
+
+.balance-statistic.connected .ant-statistic-content-value {
+  text-shadow: 0 0 10px rgba(208, 173, 74, 0.3);
+}
+
+.balance-statistic.disconnected .ant-statistic-content-value {
+  opacity: 0.7;
+}
+
+.offline-indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(255, 77, 79, 0.9);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.balance-update-indicator {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(82, 196, 26, 0.9);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 500;
+  animation: slideInFromRight 0.5s ease-out;
+}
+
+.update-dot {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+.update-text {
+  white-space: nowrap;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Balance value animation */
+.balance-statistic .ant-statistic-content-value {
+  transition: all 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .balance-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .balance-label {
+    font-size: 13px;
+  }
+  
+  .balance-icon {
+    font-size: 16px;
+  }
+  
+  .refresh-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .offline-indicator {
+    position: static;
+    display: inline-block;
+    margin-top: 4px;
+  }
+  
+  .balance-update-indicator {
+    position: static;
+    margin-top: 4px;
+    align-self: flex-start;
+  }
+}
+
+/* Size variants */
+.real-time-balance.size-small .balance-icon {
+  font-size: 14px;
+}
+
+.real-time-balance.size-small .balance-label {
+  font-size: 12px;
+}
+
+.real-time-balance.size-large .balance-icon {
+  font-size: 22px;
+}
+
+.real-time-balance.size-large .balance-label {
+  font-size: 16px;
+}
+
+/* Loading state */
+.balance-statistic.loading .ant-statistic-content-value {
+  opacity: 0.6;
+  animation: pulse 1s infinite;
+}

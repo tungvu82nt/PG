@@ -1,0 +1,56 @@
+.bank-accounts-container {
+  width: 100%;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.add-account-button {
+  background-color: #d0ad4a !important;
+  border-color: #d0ad4a !important;
+}
+
+.add-account-button:hover {
+  background-color: #b8963a !important;
+  border-color: #b8963a !important;
+}
+
+.bank-accounts-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.bank-accounts-card .ant-table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bank-accounts-card .ant-table-thead > tr > th {
+  background-color: #fafafa;
+  font-weight: bold;
+}
+
+.bank-accounts-card .ant-table-tbody > tr:hover {
+  background-color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .add-account-button {
+    width: 100%;
+  }
+  
+  .bank-accounts-card {
+    overflow-x: auto;
+  }
+}

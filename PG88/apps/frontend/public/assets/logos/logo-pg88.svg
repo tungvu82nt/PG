@@ -1,0 +1,18 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle for logo -->
+  <circle cx="20" cy="20" r="18" fill="#d0ad4a" opacity="0.1" stroke="#d0ad4a" stroke-width="1"/>
+
+  <!-- PG88 Text -->
+  <text x="20" y="26" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#d0ad4a">PG88</text>
+
+  <!-- Decorative elements -->
+  <circle cx="45" cy="12" r="2" fill="#d0ad4a"/>
+  <circle cx="55" cy="12" r="2" fill="#d0ad4a"/>
+  <circle cx="65" cy="12" r="2" fill="#d0ad4a"/>
+
+  <!-- Brand text -->
+  <text x="45" y="28" font-family="Arial, sans-serif" font-size="10" fill="#d0ad4a">CASINO</text>
+
+  <!-- Accent bar -->
+  <line x1="45" y1="32" x2="75" y2="32" stroke="#d0ad4a" stroke-width="1"/>
+</svg>

@@ -1,0 +1,234 @@
+.promotion-section {
+  margin: 40px 0;
+  padding: 0 16px;
+}
+
+.promotion-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.promotion-title {
+  color: #d0ad4a !important;
+  font-size: 32px !important;
+  font-weight: bold !important;
+  margin-bottom: 8px !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.promotion-title-icon {
+  font-size: 36px;
+  color: #FFD700;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.promotion-subtitle {
+  color: #ffffff !important;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.promotion-cards {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.promotion-card {
+  border-radius: 16px !important;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.3s ease;
+  height: 280px;
+  position: relative;
+}
+
+.promotion-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4) !important;
+}
+
+.promotion-card .ant-card-body {
+  padding: 0 !important;
+  height: 100%;
+}
+
+.promotion-card-content {
+  display: flex;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.promotion-card-left {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.promotion-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  width: fit-content;
+  margin-bottom: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.promotion-card-title {
+  color: white !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  margin: 0 0 8px 0 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.promotion-card-subtitle {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.promotion-card-description {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.promotion-play-btn {
+  background: #DC143C !important;
+  border-color: #DC143C !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 25px !important;
+  height: 45px !important;
+  font-size: 14px;
+  box-shadow: 0 4px 16px rgba(220, 20, 60, 0.4);
+  transition: all 0.3s ease;
+  width: fit-content;
+  padding: 0 24px !important;
+}
+
+.promotion-play-btn:hover {
+  background: #B91C3C !important;
+  border-color: #B91C3C !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 20, 60, 0.6);
+}
+
+.promotion-card-right {
+  position: absolute;
+  right: -20px;
+  top: 0;
+  bottom: 0;
+  width: 180px;
+  z-index: 1;
+}
+
+.promotion-character {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.promotion-character-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.promotion-card:hover .promotion-character-img {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .promotion-section {
+    margin: 24px 0;
+    padding: 0 12px;
+  }
+  
+  .promotion-title {
+    font-size: 24px !important;
+  }
+  
+  .promotion-title-icon {
+    font-size: 28px;
+  }
+  
+  .promotion-card {
+    height: 200px;
+  }
+  
+  .promotion-card-left {
+    padding: 16px;
+  }
+  
+  .promotion-card-title {
+    font-size: 16px !important;
+  }
+  
+  .promotion-card-subtitle {
+    font-size: 12px;
+  }
+  
+  .promotion-card-description {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+  
+  .promotion-play-btn {
+    height: 36px !important;
+    font-size: 12px;
+    padding: 0 16px !important;
+  }
+  
+  .promotion-card-right {
+    width: 120px;
+    right: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promotion-card {
+    height: 160px;
+  }
+  
+  .promotion-card-left {
+    padding: 12px;
+  }
+  
+  .promotion-card-title {
+    font-size: 14px !important;
+  }
+  
+  .promotion-card-right {
+    width: 100px;
+  }
+}

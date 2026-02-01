@@ -1,0 +1,43 @@
+.admin-dashboard-container {
+  width: 100%;
+}
+
+.stat-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pending-withdrawals-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 24px;
+}
+
+.pending-withdrawals-card .ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pending-withdrawals-card .ant-table-thead > tr > th {
+  background-color: #fafafa;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard-container {
+    padding: 0 16px;
+  }
+  
+  .stat-card {
+    margin-bottom: 16px;
+  }
+  
+  .pending-withdrawals-card {
+    overflow-x: auto;
+  }
+}

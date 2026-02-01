@@ -1,0 +1,119 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #002b4d 0%, #001529 100%);
+  padding: 24px;
+  position: relative;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Use a nice gradient or pattern if image is missing */
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
+  z-index: 0;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(17, 24, 39, 0.95) !important;
+  border: 1px solid #d0ad4a !important;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(208, 173, 74, 0.15);
+  overflow: hidden;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.login-header h3.ant-typography {
+  margin-bottom: 8px;
+  color: #d0ad4a !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.login-header span.ant-typography {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.login-input-icon {
+  color: #d0ad4a;
+}
+
+/* Override Ant Design Inputs for Dark Mode */
+.ant-input-affix-wrapper {
+  background-color: #001529 !important;
+  border-color: #374151 !important;
+  color: white !important;
+}
+
+.ant-input-affix-wrapper:hover,
+.ant-input-affix-wrapper:focus-within {
+  border-color: #d0ad4a !important;
+  box-shadow: 0 0 0 2px rgba(208, 173, 74, 0.2) !important;
+}
+
+.ant-input {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.ant-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.login-button {
+  background: linear-gradient(180deg, #d0ad4a 0%, #a68426 100%) !important;
+  border: none !important;
+  height: 48px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000 !important;
+  transition: all 0.2s;
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(208, 173, 74, 0.4);
+  background: linear-gradient(180deg, #e3c056 0%, #b8922c 100%) !important;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+.login-footer span.ant-typography {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.login-footer a {
+  color: #d0ad4a;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 5px rgba(208, 173, 74, 0.5);
+}
+
+/* Divider Override */
+.ant-divider {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+}

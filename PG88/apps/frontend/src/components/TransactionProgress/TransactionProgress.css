@@ -1,0 +1,272 @@
+/* Transaction Progress Component Styles */
+.transaction-progress {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid #d0ad4a40;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.transaction-progress .ant-card-head {
+  background: linear-gradient(135deg, #d0ad4a20 0%, #d0ad4a10 100%);
+  border-bottom: 1px solid #d0ad4a30;
+  border-radius: 16px 16px 0 0;
+}
+
+.transaction-progress .ant-card-head-title {
+  padding: 16px 0;
+}
+
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.status-tag {
+  font-weight: 600;
+  border: none !important;
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+
+.transaction-info {
+  padding: 8px 0;
+}
+
+.transaction-summary {
+  background: rgba(208, 173, 74, 0.05);
+  border: 1px solid rgba(208, 173, 74, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.summary-row:last-child {
+  margin-bottom: 0;
+}
+
+.summary-label {
+  color: #8c8c8c !important;
+  font-size: 14px;
+}
+
+.summary-value {
+  color: white !important;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.summary-value.amount {
+  color: #d0ad4a !important;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.progress-section {
+  background: rgba(24, 144, 255, 0.05);
+  border: 1px solid rgba(24, 144, 255, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.progress-label {
+  color: #8c8c8c !important;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.progress-percent {
+  color: #d0ad4a !important;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.transaction-progress-bar {
+  margin-bottom: 8px;
+}
+
+.transaction-progress-bar .ant-progress-bg {
+  background: linear-gradient(90deg, #d0ad4a 0%, #ffd700 100%) !important;
+}
+
+.time-remaining {
+  color: #1890ff !important;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.transaction-steps {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.custom-steps .ant-steps-item-title {
+  color: white !important;
+  font-weight: 500;
+}
+
+.custom-steps .ant-steps-item-description {
+  color: #8c8c8c !important;
+}
+
+.custom-steps .ant-steps-item-wait .ant-steps-item-icon {
+  background: #1f1f1f;
+  border-color: #666;
+}
+
+.custom-steps .ant-steps-item-wait .ant-steps-item-icon .ant-steps-icon {
+  color: #666;
+}
+
+.custom-steps .ant-steps-item-process .ant-steps-item-icon {
+  background: #1890ff;
+  border-color: #1890ff;
+}
+
+.custom-steps .ant-steps-item-finish .ant-steps-item-icon {
+  background: #52c41a;
+  border-color: #52c41a;
+}
+
+.custom-steps .ant-steps-item-error .ant-steps-item-icon {
+  background: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+.custom-steps .ant-steps-item-finish .ant-steps-item-tail::after {
+  background-color: #52c41a;
+}
+
+.custom-steps .ant-steps-item-process .ant-steps-item-tail::after {
+  background-color: #1890ff;
+}
+
+.step-description {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.step-desc-text {
+  color: #8c8c8c !important;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.step-timestamp {
+  color: #666 !important;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.transaction-actions {
+  padding-top: 16px;
+  border-top: 1px solid #333;
+  text-align: center;
+}
+
+.cancel-button {
+  background: transparent;
+  border-color: #ff4d4f;
+  color: #ff4d4f;
+}
+
+.cancel-button:hover {
+  background: rgba(255, 77, 79, 0.1);
+  border-color: #ff7875;
+  color: #ff7875;
+}
+
+.retry-button {
+  background: linear-gradient(135deg, #d0ad4a 0%, #ffd700 100%);
+  border: none;
+  color: #000;
+  font-weight: 600;
+}
+
+.retry-button:hover {
+  background: linear-gradient(135deg, #ffd700 0%, #ffec3d 100%);
+  color: #000;
+}
+
+/* Loading animation for processing status */
+.transaction-progress .ant-steps-item-process .ant-steps-item-icon .anticon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .transaction-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .summary-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .progress-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .transaction-actions {
+    text-align: left;
+  }
+  
+  .transaction-actions .ant-space {
+    width: 100%;
+  }
+  
+  .transaction-actions .ant-btn {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .transaction-progress .ant-card-body {
+    padding: 16px !important;
+  }
+  
+  .transaction-summary,
+  .progress-section,
+  .transaction-steps {
+    padding: 12px;
+  }
+  
+  .summary-value.amount {
+    font-size: 14px;
+  }
+  
+  .progress-percent {
+    font-size: 14px;
+  }
+}

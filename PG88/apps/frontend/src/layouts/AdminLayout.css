@@ -1,0 +1,64 @@
+.admin-layout {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.admin-layout-sider {
+  background-color: #001529;
+  min-height: 100vh;
+}
+
+.admin-layout-logo {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-layout-menu {
+  margin-top: 0;
+}
+
+.admin-layout-content {
+  flex: 1;
+}
+
+.admin-layout-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 24px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 64px;
+}
+
+.admin-layout-header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.admin-layout-main {
+  padding: 24px;
+  background-color: #f5f5f5;
+  min-height: calc(100vh - 64px);
+}
+
+@media (max-width: 768px) {
+  .admin-layout-main {
+    padding: 16px;
+  }
+  
+  .admin-layout-header {
+    padding: 0 16px;
+  }
+  
+  .admin-layout-header-right {
+    gap: 16px;
+  }
+}

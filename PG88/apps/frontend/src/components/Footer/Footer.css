@@ -1,0 +1,60 @@
+/* Provider Slider Animation */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.provider-slider {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.provider-slider:before,
+.provider-slider:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+}
+
+.provider-slider:before {
+    left: 0;
+    background: linear-gradient(to right, #001529, transparent);
+}
+
+.provider-slider:after {
+    right: 0;
+    background: linear-gradient(to left, #001529, transparent);
+}
+
+.provider-track {
+    display: inline-block;
+    animation: slide 40s linear infinite;
+}
+
+.provider-track:hover {
+    animation-play-state: paused;
+}
+
+.provider-logo {
+    height: 40px;
+    margin: 0 30px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    filter: grayscale(100%);
+}
+
+.provider-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}

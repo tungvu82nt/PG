@@ -1,0 +1,13 @@
+.promo-center {
+  transition: all 0.3s ease-in-out;
+}
+
+.promo-center.promo-minimized {
+  width: 110px !important;
+  height: 110px !important;
+}
+
+.promo-close-btn:hover {
+  background-color: #d0ad4a !important;
+  color: #000 !important;
+}

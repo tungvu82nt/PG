@@ -1,0 +1,19 @@
+.settings-container {
+  padding: 20px;
+}
+
+.settings-card {
+  margin-bottom: 20px;
+}
+
+.ant-tabs {
+  margin-top: 20px;
+}
+
+.ant-tabs-tab {
+  font-size: 16px;
+}
+
+.ant-tabs-content {
+  padding: 20px 0;
+}

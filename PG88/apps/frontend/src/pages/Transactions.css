@@ -1,0 +1,73 @@
+.transactions-container {
+  width: 100%;
+}
+
+.filters-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  padding: 16px;
+}
+
+.transactions-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.transaction-icon {
+  font-size: 16px;
+}
+
+.transaction-icon.deposit {
+  color: #52c41a;
+}
+
+.transaction-icon.withdraw {
+  color: #ff4d4f;
+}
+
+.transaction-amount {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.transaction-amount.deposit {
+  color: #52c41a;
+}
+
+.transaction-amount.withdraw {
+  color: #ff4d4f;
+}
+
+.transactions-card .ant-table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.transactions-card .ant-table-thead > tr > th {
+  background-color: #fafafa;
+  font-weight: bold;
+}
+
+.transactions-card .ant-table-tbody > tr:hover {
+  background-color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+  .filters-card {
+    overflow-x: auto;
+  }
+  
+  .filters-card .ant-space {
+    width: 100%;
+  }
+  
+  .filters-card .ant-space-item {
+    min-width: 140px;
+  }
+  
+  .transactions-card {
+    overflow-x: auto;
+  }
+}

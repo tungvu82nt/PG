@@ -1,0 +1,439 @@
+/* Enhanced Withdraw Page Styles */
+.withdraw-container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.withdraw-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 20px 0;
+}
+
+.withdraw-header h3 {
+  color: #d0ad4a !important;
+  margin: 0;
+  font-weight: 600;
+}
+
+.current-transaction {
+  margin-bottom: 24px;
+}
+
+.transaction-card {
+  border: 1px solid #d0ad4a;
+  box-shadow: 0 4px 12px rgba(208, 173, 74, 0.15);
+}
+
+.withdraw-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.balance-overview-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 24px;
+}
+
+.balance-overview-card .ant-card-body {
+  padding: 24px;
+}
+
+.balance-overview {
+  text-align: center;
+}
+
+.balance-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(208, 173, 74, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(208, 173, 74, 0.2);
+}
+
+.balance-icon {
+  font-size: 24px;
+  color: #d0ad4a;
+  min-width: 24px;
+}
+
+.balance-details {
+  flex: 1;
+  text-align: left;
+}
+
+.balance-label {
+  display: block;
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.balance-amount {
+  display: block;
+  color: #d0ad4a !important;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.available-amount {
+  display: block;
+  color: #52c41a !important;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.withdraw-form-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.withdraw-form-card .ant-card-body {
+  padding: 32px;
+}
+
+.withdraw-form-card h4 {
+  color: #d0ad4a !important;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.withdraw-form {
+  max-width: 100%;
+}
+
+.bank-select .ant-select-selector {
+  background: rgba(208, 173, 74, 0.1) !important;
+  border: 2px solid #d0ad4a !important;
+  color: white;
+  min-height: 50px;
+}
+
+.bank-select .ant-select-selector:hover,
+.bank-select.ant-select-focused .ant-select-selector {
+  border-color: #ffd700 !important;
+  box-shadow: 0 0 0 2px rgba(208, 173, 74, 0.2);
+}
+
+.bank-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.bank-icon {
+  color: #d0ad4a;
+  font-size: 18px;
+}
+
+.bank-info {
+  flex: 1;
+}
+
+.bank-name {
+  display: block;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.account-number {
+  display: block;
+  color: #d0ad4a;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.account-holder {
+  display: block;
+  color: #999;
+  font-size: 12px;
+}
+
+.amount-input {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.amount-input .ant-input {
+  background: rgba(208, 173, 74, 0.1);
+  border: 2px solid #d0ad4a;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.amount-input .ant-input:focus,
+.amount-input .ant-input-focused {
+  border-color: #ffd700;
+  box-shadow: 0 0 0 2px rgba(208, 173, 74, 0.2);
+}
+
+.quick-amounts {
+  margin: 16px 0 24px 0;
+  padding: 16px;
+  background: rgba(208, 173, 74, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(208, 173, 74, 0.2);
+}
+
+.quick-amounts-label {
+  color: #d0ad4a;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.quick-amount-btn {
+  background: rgba(208, 173, 74, 0.1);
+  border: 1px solid #d0ad4a;
+  color: #d0ad4a;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.quick-amount-btn:hover {
+  background: #d0ad4a;
+  color: #000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(208, 173, 74, 0.3);
+}
+
+.fee-calculation {
+  margin: 24px 0;
+}
+
+.fee-card {
+  background: rgba(255, 193, 7, 0.05);
+  border: 1px solid rgba(255, 193, 7, 0.2);
+  border-radius: 8px;
+}
+
+.fee-card .ant-card-body {
+  padding: 20px;
+}
+
+.fee-card h5 {
+  color: #ffc107 !important;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.fee-row.total {
+  border-top: 1px solid rgba(255, 193, 7, 0.3);
+  padding-top: 12px;
+  margin-top: 8px;
+}
+
+.fee-label {
+  color: #999;
+  font-weight: 500;
+}
+
+.fee-label.total {
+  color: #ffc107;
+  font-weight: 600;
+}
+
+.fee-value {
+  color: white;
+  font-weight: 600;
+}
+
+.fee-value.total {
+  color: #ffc107;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.fee-value.insufficient {
+  color: #ff4d4f !important;
+}
+
+.description-input .ant-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #333;
+  color: white;
+}
+
+.description-input .ant-input:focus,
+.description-input .ant-input-focused {
+  border-color: #d0ad4a;
+  box-shadow: 0 0 0 2px rgba(208, 173, 74, 0.2);
+}
+
+.withdraw-info {
+  margin: 24px 0;
+}
+
+.info-card {
+  background: rgba(208, 173, 74, 0.05);
+  border: 1px solid rgba(208, 173, 74, 0.2);
+  border-radius: 8px;
+}
+
+.info-card .ant-card-body {
+  padding: 20px;
+}
+
+.info-card h5 {
+  color: #d0ad4a !important;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.info-card .ant-typography {
+  color: #ccc;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.info-card .ant-typography[class*="warning"] {
+  color: #ffc107 !important;
+  font-weight: 500;
+}
+
+.withdraw-submit-button {
+  background: linear-gradient(135deg, #d0ad4a 0%, #ffd700 100%);
+  border: none;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  box-shadow: 0 4px 12px rgba(208, 173, 74, 0.4);
+  transition: all 0.3s ease;
+}
+
+.withdraw-submit-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ffd700 0%, #d0ad4a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(208, 173, 74, 0.5);
+}
+
+.withdraw-submit-button:active {
+  transform: translateY(0);
+}
+
+.withdraw-submit-button:disabled {
+  background: #333 !important;
+  color: #666 !important;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .withdraw-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .balance-overview-card {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .withdraw-container {
+    padding: 16px;
+  }
+  
+  .withdraw-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .withdraw-form-card .ant-card-body {
+    padding: 20px;
+  }
+  
+  .balance-overview-card .ant-card-body {
+    padding: 16px;
+  }
+  
+  .balance-item {
+    padding: 12px;
+  }
+  
+  .balance-amount {
+    font-size: 20px !important;
+  }
+  
+  .available-amount {
+    font-size: 18px !important;
+  }
+  
+  .quick-amounts {
+    padding: 12px;
+  }
+  
+  .quick-amount-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  
+  .fee-card .ant-card-body {
+    padding: 16px;
+  }
+  
+  .info-card .ant-card-body {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .withdraw-header h3 {
+    font-size: 20px;
+  }
+  
+  .withdraw-form-card h4 {
+    font-size: 16px;
+  }
+  
+  .amount-input .ant-input {
+    font-size: 16px;
+  }
+  
+  .withdraw-submit-button {
+    height: 45px;
+    font-size: 14px;
+  }
+  
+  .balance-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .balance-details {
+    text-align: center;
+  }
+  
+  .fee-row {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+}

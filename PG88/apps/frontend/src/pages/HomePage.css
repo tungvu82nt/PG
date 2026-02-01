@@ -1,0 +1,29 @@
+/* Live Casino Card Hover Effects */
+.casino-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.casino-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent);
+  transform: skewX(-25deg);
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.casino-card:hover::before {
+  left: 125%;
+}
+
+.floating-actions-container {
+  z-index: 1000;
+}

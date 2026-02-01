@@ -1,0 +1,210 @@
+.winners-ticker {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  width: 280px;
+  background: linear-gradient(135deg, rgba(0, 21, 41, 0.95) 0%, rgba(16, 42, 66, 0.95) 100%);
+  border: 1px solid rgba(208, 173, 74, 0.3);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%) translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) translateY(-50%);
+    opacity: 1;
+  }
+}
+
+.ticker-container {
+  position: relative;
+}
+
+.ticker-content {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.win-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(208, 173, 74, 0.1);
+  border-radius: 50%;
+  border: 1px solid rgba(208, 173, 74, 0.3);
+}
+
+.winner-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.win-type {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.winner-details {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.ticker-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(208, 173, 74, 0.2);
+}
+
+.indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(208, 173, 74, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background: #d0ad4a;
+  transform: scale(1.2);
+  box-shadow: 0 0 8px rgba(208, 173, 74, 0.5);
+}
+
+.indicator:hover {
+  background: rgba(208, 173, 74, 0.6);
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .winners-ticker {
+    position: fixed;
+    top: auto;
+    bottom: 100px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    transform: none;
+    animation: slideInUp 0.5s ease-out;
+  }
+
+  @keyframes slideInUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .winners-ticker {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .ticker-content {
+    min-height: 60px;
+  }
+
+  .win-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .winner-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}
+
+/* Animation for content changes */
+.ticker-content.changing {
+  animation: contentChange 0.6s ease-in-out;
+}
+
+@keyframes contentChange {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glow effect for jackpot wins */
+.winners-ticker:has(.win-type:contains("JACKPOT")) {
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(255, 215, 0, 0.3);
+  animation: jackpotGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes jackpotGlow {
+  from {
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  to {
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(255, 215, 0, 0.5);
+  }
+}
+
+/* Hover effects */
+.winners-ticker:hover {
+  transform: translateY(-50%) scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .winners-ticker:hover {
+    transform: scale(1.02);
+  }
+}
