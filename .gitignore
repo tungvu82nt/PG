@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables (CRITICAL)
+.env
+.env.*
+*.env
+*.env.*
+*.pem
+*.key
+*.cert
+*.crt
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+
+# Sensitive/Large Data Directories
+_debug/
+_downloaded_images/
+source_code_dump/
+processed_data/
+json_config/
+_raw_data/
+analysis_temp/
+backup/
+PG88/backup/
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# Tool specific
+.agent/
+.gemini/
+.kiro/
+.trae/
+
+# Misc
+*.zip
+*.tar.gz
+*.rar
+*.bak
+*.swp
